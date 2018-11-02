@@ -9,6 +9,7 @@
         <div align="center" style="margin-top:120px;">
             <h3 style="color: red">以下填写你要表白的信息！</h3>
             <input type="text" id="inp" placeholder="请输入"/>
+            <button onclick="set()">生成</button>
 
             <!--二维码-->
             <div id="qrcode" style="margin-top: 20px;"></div>
@@ -25,9 +26,15 @@
                 $('#inp').on("keydown",function(e){
                     if(e.keyCode == 13){
                         qrcode.makeCode(txt.value);
-
+                        
                     }
-                })
+                });
+            function set(){
+                 
+                        qrcode.makeCode(txt.value);
+                
+                 
+            }
 
 
 
